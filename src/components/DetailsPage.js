@@ -22,7 +22,6 @@ import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 import { CardContext } from "../contexts/CardContextProvider";
 // components
 import Loading from "./Loading";
-import Banner from "./Banner";
 import { GetSingleProducts } from "../services/getSingleProducts";
 
 const DetailsPage = () => {

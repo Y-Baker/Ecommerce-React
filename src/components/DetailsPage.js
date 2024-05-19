@@ -267,9 +267,9 @@ const DetailsPage = () => {
           </Grid>
         )}
       </Grid>
-      <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+      {/* <Box sx={{ display: { xs: "none", sm: "flex" } }}>
         <Banner />
-      </Box>
+      </Box> */}
     </Container>
   );
 };

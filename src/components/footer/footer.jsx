@@ -11,13 +11,13 @@ export default function Footer() {
         <div className="container">
             <div className="row">
                 <div className="col-sm-6 col-md-3 item">
-                    <h3>About</h3>
+                    {/* <h3>About</h3>
                     <ul>
                         <li><Link to="#">Company</Link></li>
                         <li><Link to="#">Team</Link></li>
                         <li><Link to="#">Careers</Link></li>
                         <li><Link to="#">Blog</Link></li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className="effect aeneas">
                   <div className="buttons">

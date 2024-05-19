@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Container, Grid } from "@mui/material";
+import "../assets/styles/components/_store.scss";
 // context
 import { ProductContext } from "../contexts/ProductContextProvider";
 // components
@@ -8,7 +9,6 @@ import Loading from "./Loading";
 import { GetAllCategories } from "../services/getAllCategories";
 import { useState, useEffect } from "react";
 import { Typography } from "@mui/material";
-
 
 const Store = () => {
   const products = useContext(ProductContext);
@@ -37,25 +37,25 @@ const Store = () => {
       <Grid container>
         {categories.length ? (
           categories.map((category) => (
-            filterProducts(category).length > 0 ? (
-              filterProducts(category).map((product) => (
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  lg={3}
-                  p={2}
-                  mt={8}
-                  key={product.id}
-                >
-                  <Products productData={product} />
+            <Grid item xs={12} key={category} className="Category-Section">
+              <Typography variant="h4" sx={{ mt: 4 }}>
+                {category}
+              </Typography>
+              {filterProducts(category).length > 0 ? (
+                <Grid container spacing={2} mt={2}>
+                  {filterProducts(category).map((product) => (
+                    <Grid item xs={12} sm={6} md={4} lg={3} key={product.id}>
+                      <Products productData={product} />
+                    </Grid>
+                  ))}
                 </Grid>
-              ))) : (
-                <Typography variant="h6" align="center" key={category}>
-                  No products found in {category}
+              ) : (
+                <Typography variant="h6" sx={{ mt: 4 }}>
+                  No products available
                 </Typography>
-              )))
+              )}
+            </Grid>
+          ))
         ) : (
           <Grid item xs={12}>
             <Loading />

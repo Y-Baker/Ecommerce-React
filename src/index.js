@@ -1,14 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import ProductProvider from './contexts/productContext';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+// Styles
+import "./assets/styles/index.scss";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <ProductProvider>
-    <React.StrictMode>
+const theme = createTheme({
+  typography: {
+    fontFamily: ["Quicksand"].join(","),
+    fontSize: 15,
+    fontWeightLight: 400,
+    fontWeightMedium: 500,
+    fontWeightRegular: 600,
+    fontWeightBold: 700,
+  },
+});
+
+ReactDOM.render(
+  <BrowserRouter>
+    <ThemeProvider theme={theme}>
       <App />
-    </React.StrictMode>
-    </ProductProvider>
+    </ThemeProvider>
+  </BrowserRouter>,
+  document.getElementById("root")
 );

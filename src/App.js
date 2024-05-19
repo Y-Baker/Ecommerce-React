@@ -15,7 +15,7 @@ const App = () => {
       <CardContextProvider>
         <Layout>
           <Routes>
-            <Route path="/products" element={<Store />} />
+            <Route path="/" element={<Store />} />
             <Route path="/cards" element={<ShopCard />} />
             <Route path="/products/:id" element={<DetailsPage />} />
             <Route path="/*" element={<Navigate to="/products" />} />

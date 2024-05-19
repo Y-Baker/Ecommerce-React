@@ -1,7 +1,7 @@
-import http from "./http";
+import api from "./api";
 
 const GetAllCategories = async () => {
-  const result = await http.get(`/products/categories`);
+  const result = await api.get(`/products/categories`);
   return result.data;
 };
 export { GetAllCategories };

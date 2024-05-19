@@ -1,7 +1,7 @@
-import http from "./http";
+import api from "./api";
 
 const GetAllProducts = async () => {
-  const result = await http.get(`/products`);
+  const result = await api.get(`/products`);
   return result.data;
 };
 export { GetAllProducts };

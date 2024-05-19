@@ -1,7 +1,7 @@
 import axios from "axios";
 axios.defaults.baseURL = "https://fakestoreapi.com";
 
-const http = {
+const api = {
   get: axios.get,
   post: axios.post,
   delete: axios.delete,
@@ -9,4 +9,4 @@ const http = {
   patch: axios.patch,
 };
 
-export default http;
+export default api;

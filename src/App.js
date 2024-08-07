@@ -13,12 +13,12 @@ const App = () => {
   return (
     <ProductContextProvider>
       <CardContextProvider>
-        <Layout>
+        <Layout>  {/* header */}
           <Routes>
             <Route path="/" element={<Store />} />
             <Route path="/cards" element={<ShopCard />} />
             <Route path="/products/:id" element={<DetailsPage />} />
-            <Route path="/*" element={<Navigate to="/products" />} />
+            <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </Layout>
       </CardContextProvider>
